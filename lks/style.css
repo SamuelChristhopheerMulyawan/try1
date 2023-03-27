@@ -29,9 +29,20 @@
 }
 
 /* ===========================================================================s*/
-.schbar{
-	border-radius: 20px;
+.sch-bar{
+	border-radius: 30px;
+	text-align: center;
+
 }
+.schbar{
+	width: 200px;
+	height: 20px;
+}
+
+.schbar::placeholder{
+	font-size: 20px;
+}
+
 /*=========================================================*/
 .ttgkami{
 	background: black;
