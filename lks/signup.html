@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="con">
+        <form action="signup.php" method="post">
+            <label for="">Nama Depan</label>
+            <input type="text" required name="fname">
+            <label for="">Nama belakang</label>
+            <input type="text" required name="lname">
+            <label for="">id</label>
+            <input type="text"  readonly id="token" onclick="gila" name="id">
+            <label for="">Password</label>
+            <input type="password" required name="passwd">
+            <button type="submit">Submit</button>
+            
+        </form>
+    </div>
+    <script>
+        function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$!^?';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+        }
+
+  document.getElementById("token").value = makeid(10);
+
+
+
+
+    </script>
 </body>
 </html>
